@@ -1,0 +1,37 @@
+<form id="addTaskForm">
+  <table class="table table-condensed">
+    <thead>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input id="inputLabel" class="input-medium" placeholder="label" type="text"/></td> 
+        <td>
+          <button id="addTaskButton" class="btn btn-primary addTask" href="javascript:void(0)">create</button>
+        </td>
+      </tr> 
+    </tbody>
+  </table>    
+</form>
+<h3>Tasks</h3>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Label</th>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  <% _.each(taskList, function(task) { %>
+    <tr>
+      <td>
+        <%= task.get('label') %>
+      </td>
+      <td>
+        <ul class="the-icons">
+          <a href="javascript:void(0)" rel="tooltip" title="remove task"><i id='<%= task.get("id") %>' class="icon-trash removeTask"></i></a>             
+        </ul>
+      </td>       
+    </tr>    
+  <% }); %>
+  </tbody>
+</table>
