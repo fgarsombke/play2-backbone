@@ -3,17 +3,12 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /                        module.Dependencies.application.index 
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
-
-# Tasks          
-GET     /tasks                  controllers.Application.tasks()
-POST    /tasks                  controllers.Application.newTask()
-POST    /tasks/:id/delete       controllers.Application.deleteTask(id: Long)
+GET     /assets/*file            controllers.Assets.at(path="/public", file)
 
 # Backbone Routes
-GET     /backbonetasks          controllers.Application.backbonetasks()
-POST    /backbonetasks          controllers.Application.newBackboneTask()
-DELETE  /backbonetasks/:id      controllers.Application.deleteBackboneTask(id: Long)
+GET     /backbonetasks           module.Dependencies.application.backbonetasks()
+POST    /backbonetasks           module.Dependencies.application.newBackboneTask()
+DELETE  /backbonetasks/:id       module.Dependencies.application.deleteBackboneTask(id: Long)

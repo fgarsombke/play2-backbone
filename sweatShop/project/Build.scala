@@ -8,7 +8,9 @@ object ApplicationBuild extends Build {
     val appVersion      = "1.0-SNAPSHOT"
 
     val appDependencies = Seq(
-      // Add your project dependencies here,
+      "com.typesafe" % "play-plugins-guice" % "2.0.3",
+      "org.mockito" % "mockito-all" % "1.9.0"
+      // Add your project dependencies here
     )
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(

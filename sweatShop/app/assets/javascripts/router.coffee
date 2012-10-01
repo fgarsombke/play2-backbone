@@ -11,8 +11,6 @@ define (require) ->
       '*actions': 'defaultAction'
     
     defaultAction: (actions) ->
-    
-      console.log 'this is so foobar!'
       ##@aboutView = once.getAboutView()
       ##@aboutView.render()      
 
